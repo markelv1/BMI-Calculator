@@ -93,7 +93,7 @@ class IMCCalculator(App):
             "imc": imc,
             "ategory": category
         }
-        file_path = "D:/Code/app/IMC.json"
+        file_path = "IMC.json"
         if os.path.exists(file_path) and os.stat(file_path).st_size > 0:
             with open(file_path, 'r') as file:
                 try:
