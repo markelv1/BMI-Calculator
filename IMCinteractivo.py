@@ -39,7 +39,7 @@ class IMCCalculator(App):
             weight = float(weight)
             height = float(height)
             if height == 0:
-                raise ValueError("La altura no puede ser cero.")
+                raise ValueError("Height can't be zero.")
             imc = weight / (height ** 2)
             category = self.interpret_imc(imc)
             self.show_result(imc, category)
@@ -93,6 +93,8 @@ class IMCCalculator(App):
             "imc": imc,
             "ategory": category
         }
+
+        #Add path here
         file_path = "IMC.json"
         if os.path.exists(file_path) and os.stat(file_path).st_size > 0:
             with open(file_path, 'r') as file:
